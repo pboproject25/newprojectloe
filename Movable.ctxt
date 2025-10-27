@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=Movable
+comment0.text=\r\n\ Interface\ untuk\ unit\ yang\ dapat\ bergerak.\r\n
+comment1.params=
+comment1.target=void\ moveForward()
+comment2.params=
+comment2.target=void\ stop()
+numComments=3

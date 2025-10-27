@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=LegendOfElkaidu
+comment1.params=
+comment1.target=LegendOfElkaidu()
+comment1.text=\r\n\ Constructor\ default.\r\n\ Dipanggil\ jika\ kita\ hanya\ menulis\ 'new\ LegendOfElkaidu()'.\r\n\ Ini\ akan\ memanggil\ constructor\ lain\ di\ bawah\ dengan\ ukuran\ default\ 800x400.\r\n
+comment2.params=width\ height\ cellSize
+comment2.target=LegendOfElkaidu(int,\ int,\ int)
+comment2.text=\r\n\ Constructor\ BARU\ yang\ kita\ tambahkan.\r\n\ Constructor\ ini\ menerima\ pengaturan\ ukuran\ dan\ meneruskannya\r\n\ ke\ 'super'\ (yaitu\ constructor\ kelas\ World).\r\n
+numComments=3
