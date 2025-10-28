@@ -15,9 +15,9 @@ public class AttackHitbox extends Actor {
         hitTargets = new ArrayList<Actor>();
 
         GreenfootImage img = new GreenfootImage(40, 40);
-        //img.setColor(new Color(255, 0, 0, 100)); // Merah (untuk debug)
-        img.fillRect(0, 0, 40, 40);
-        img.setColor(new Color(0, 0, 0, 0)); // Transparan 
+        img.setColor(new Color(255, 0, 0, 100)); // Merah (untuk debug)
+        //img.fillRect(0, 0, 40, 40);
+        //img.setColor(new Color(0, 0, 0, 0)); // Transparan 
         setImage(img);
     }
 
