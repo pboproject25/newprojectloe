@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=AttackHitbox
+comment1.params=owner\ damage\ duration
+comment1.target=AttackHitbox(Character,\ int,\ int)
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ checkHit()
+comment3.text=\r\n\ Cek\ tabrakan\ dengan\ target\ yang\ valid.\r\n
+comment4.params=target
+comment4.target=boolean\ isEnemyFaction(Character)
+comment4.text=\r\n\ Helper\ untuk\ cek\ faksi\ musuh.\r\n
+numComments=5

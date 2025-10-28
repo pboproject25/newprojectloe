@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=SpriteLoader
+comment1.params=path\ frameCount
+comment1.target=greenfoot.GreenfootImage[]\ loadSprites(java.lang.String,\ int)
+numComments=2

@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=Damageable
+comment0.text=\r\n\ Interface\ untuk\ unit\ yang\ dapat\ menerima\ damage.\r\n
+comment1.params=amount
+comment1.target=void\ takeDamage(int)
+comment2.params=
+comment2.target=boolean\ isAlive()
+numComments=3

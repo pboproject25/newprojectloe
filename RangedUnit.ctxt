@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=RangedUnit
+comment0.text=\r\n\ Interface\ untuk\ unit\ dengan\ serangan\ jarak\ jauh.\r\n
+comment1.params=target
+comment1.target=void\ shootProjectile(Character)
+numComments=2

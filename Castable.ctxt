@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=Castable
+comment0.text=\r\n\ Interface\ untuk\ unit\ yang\ dapat\ menggunakan\ skill\ atau\ kemampuan\ spesial.\r\n
+comment1.params=target
+comment1.target=void\ castSkill(Character)
+numComments=2

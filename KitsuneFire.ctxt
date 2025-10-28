@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=KitsuneFire
+comment0.text=\r\n\ Proyektil\ api\ dari\ Kitsune.\ Extends\ Projectile.\r\n\ Punya\ animasi\ sendiri\ dan\ cek\ batas\ layar.\r\n
+comment1.params=owner\ speed\ damage
+comment1.target=KitsuneFire(Character,\ int,\ int)
+comment1.text=\r\n\ Constructor\ untuk\ KitsuneFire.\r\n\ @param\ owner\ Siapa\ yang\ menembakkan\ ini\r\n\ @param\ speed\ Kecepatan\ gerak\ proyektil\r\n\ @param\ damage\ Damage\ yang\ diberikan\r\n
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\r\n\ Metode\ act\ utama.\r\n
+comment3.params=
+comment3.target=void\ animate()
+comment3.text=\r\n\ Memainkan\ animasi\ api\ (spesifik\ KitsuneFire).\r\n
+comment4.params=
+comment4.target=void\ checkCollision()
+comment4.text=\r\n\ Override\ metode\ checkCollision\ dari\ Projectile.\r\n\ Tambahkan\ logika\ pengecekan\ faksi\ sebelum\ memberikan\ damage.\r\n
+comment5.params=target
+comment5.target=boolean\ isEnemyFaction(Character)
+comment5.text=\r\n\ Helper\ cek\ faksi\ (mirip\ AttackHitbox).\r\n\ @param\ target\ Karakter\ yang\ terkena\ proyektil\r\n\ @return\ true\ jika\ target\ adalah\ musuh\ dari\ owner\r\n
+comment6.params=
+comment6.target=void\ checkEdge()
+comment6.text=\r\n\ Memeriksa\ apakah\ proyektil\ sudah\ keluar\ layar\ (spesifik\ KitsuneFire).\r\n
+numComments=7

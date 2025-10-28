@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Projectile
+comment1.params=owner\ speed\ damage
+comment1.target=Projectile(Character,\ int,\ int)
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ moveForward()
+comment4.params=
+comment4.target=void\ checkCollision()
+numComments=5
