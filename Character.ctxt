@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Character
+comment1.params=maxHealth\ damage\ range\ speed\ facingRight\ faction
+comment1.target=Character(int,\ int,\ int,\ int,\ boolean,\ Character.Faction)
+comment2.params=
+comment2.target=void\ act()
+comment3.params=amount
+comment3.target=void\ takeDamage(int)
+comment4.params=
+comment4.target=boolean\ isAlive()
+comment5.params=
+comment5.target=void\ die()
+comment6.params=
+comment6.target=void\ updateHealthBar()
+comment7.params=
+comment7.target=Character.Faction\ getFaction()
+comment8.params=
+comment8.target=int\ getHitboxRadius()
+numComments=9

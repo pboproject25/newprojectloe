@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=RenshiroArrow
+comment1.params=owner\ speed\ damage
+comment1.target=RenshiroArrow(Character,\ int,\ int)
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ checkCollision()
+comment4.params=target
+comment4.target=boolean\ isEnemyFaction(Character)
+comment5.params=
+comment5.target=void\ checkEdge()
+numComments=6

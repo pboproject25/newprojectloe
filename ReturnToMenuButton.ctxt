@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=ReturnToMenuButton
+comment0.text=\r\n\ Tombol\ untuk\ kembali\ ke\ Main\ Menu\ dari\ layar\ Victory\ atau\ Game\ Over.\r\n
+comment1.params=
+comment1.target=ReturnToMenuButton()
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\r\n\ Act\ -\ Periksa\ klik\ mouse.\r\n
+numComments=3

@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=GoldCounter
+comment1.params=
+comment1.target=GoldCounter()
+comment2.params=goldAmount
+comment2.target=void\ updateDisplay(int)
+numComments=3

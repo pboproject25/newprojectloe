@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=FactionButton
+comment1.params=label\ faction
+comment1.target=FactionButton(java.lang.String,\ Character.Faction)
+comment2.params=
+comment2.target=void\ act()
+numComments=3

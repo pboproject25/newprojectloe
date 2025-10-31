@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=DifficultyButton
+comment1.params=level
+comment1.target=DifficultyButton(java.lang.String)
+comment2.params=
+comment2.target=void\ act()
+numComments=3

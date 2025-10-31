@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=MeleeUnit
+comment0.text=\r\n\ Interface\ untuk\ unit\ dengan\ serangan\ jarak\ dekat.\r\n
+comment1.params=target
+comment1.target=void\ slash(Character)
+numComments=2

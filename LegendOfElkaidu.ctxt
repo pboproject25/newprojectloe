@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=LegendOfElkaidu
+comment1.params=
+comment1.target=void\ playMenuMusic()
+comment2.params=
+comment2.target=void\ stopMenuMusic()
+comment3.params=
+comment3.target=LegendOfElkaidu()
+comment4.params=width\ height\ cellSize
+comment4.target=LegendOfElkaidu(int,\ int,\ int)
+numComments=5

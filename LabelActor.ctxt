@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=LabelActor
+comment0.text=\r\n\ Actor\ sederhana\ hanya\ untuk\ menampilkan\ gambar\ (seperti\ teks).\r\n\ Tidak\ memiliki\ interaksi\ klik.\r\n
+comment1.params=image
+comment1.target=LabelActor(greenfoot.GreenfootImage)
+comment1.text=\r\n\ Constructor\r\n\ @param\ image\ Gambar\ yang\ akan\ ditampilkan\ (biasanya\ GreenfootImage\ berisi\ teks).\r\n
+numComments=2

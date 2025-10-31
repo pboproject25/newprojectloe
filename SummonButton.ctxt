@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=SummonButton
+comment1.params=unitClassName\ cost\ iconFileName
+comment1.target=SummonButton(java.lang.String,\ int,\ java.lang.String)
+comment2.params=
+comment2.target=void\ act()
+comment3.params=world
+comment3.target=void\ summonUnit(BattleWorld)
+numComments=4
