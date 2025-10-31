@@ -31,9 +31,11 @@ public class PyroFireball extends Projectile {
     @Override
     public void act() {
         if (getWorld() == null) return;
-
-        moveForward();
-        checkCollision(); 
+        if (getWorld() instanceof BattleWorld && ((BattleWorld)getWorld()).isPaused()) {
+            return; 
+        }
+        
+        super.act();
         checkEdge();
         animate();
     }
@@ -62,7 +64,7 @@ public class PyroFireball extends Projectile {
             if (isEnemyFaction(targetChar)) {
 
                 int radiusLedakan = 80; 
-                int durasiLedakan = 2; 
+                int durasiLedakan = 5; 
                 getWorld().addObject(new AoeHitbox(this.owner, this.damage, durasiLedakan, radiusLedakan), getX(), getY());
                 getWorld().removeObject(this);
                 

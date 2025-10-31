@@ -1,3 +1,4 @@
+// File: newprojectloe-main/Oniro.java
 import greenfoot.*;
 import java.util.List;
 
@@ -26,7 +27,7 @@ public class Oniro extends Character implements Movable, Attackable, Rewardable,
     public Oniro(boolean facingRight) {
         super(MAX_HEALTH, ATTACK_DAMAGE, ATTACK_RANGE, MOVE_SPEED, facingRight, Faction.DARK);
         try {
-            GreenfootSound spawnSound = new GreenfootSound("Oniro_spawn.wav");
+            GreenfootSound spawnSound = new GreenfootSound("spawn.wav");
             spawnSound.setVolume(75);
             spawnSound.play();
         } catch (Exception e) {
@@ -80,7 +81,7 @@ public class Oniro extends Character implements Movable, Attackable, Rewardable,
     @Override
     public void die() {
         try {
-            GreenfootSound dieSound = new GreenfootSound("Oniro_die.wav");
+            GreenfootSound dieSound = new GreenfootSound("onirodead.mp3");
             dieSound.setVolume(80);
             dieSound.play();
         } catch (Exception e) {
@@ -152,8 +153,7 @@ public class Oniro extends Character implements Movable, Attackable, Rewardable,
                 if (attackFrame == currentAttackHitFrame && !attackHasHit) {
                     slash(null);
                     try {
-                        String attackSoundFile = (currentAttackSprites == attack1Sprites) ? "Oniro_attack1.wav" : "Oniro_attack2.wav";
-                        GreenfootSound attackSound = new GreenfootSound(attackSoundFile);
+                        GreenfootSound attackSound = new GreenfootSound("oniroattack.mp3");
                         attackSound.setVolume(70);
                         attackSound.play();
                     } catch (Exception e) {

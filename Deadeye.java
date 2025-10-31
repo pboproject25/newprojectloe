@@ -1,3 +1,4 @@
+// File: newprojectloe-main/Deadeye.java
 import greenfoot.*;
 import java.util.List;
 
@@ -34,7 +35,7 @@ public class Deadeye extends Character implements Movable, Attackable, Rewardabl
     public Deadeye(boolean facingRight) {
         super(MAX_HEALTH, ATTACK_DAMAGE, RANGED_ATTACK_RANGE, MOVE_SPEED, facingRight, Faction.DARK);
         try {
-            GreenfootSound spawnSound = new GreenfootSound("Deadeye_spawn.wav");
+            GreenfootSound spawnSound = new GreenfootSound("deadeye_spawn.mp3");
             spawnSound.setVolume(75);
             spawnSound.play();
         } catch (Exception e) {
@@ -86,7 +87,7 @@ public class Deadeye extends Character implements Movable, Attackable, Rewardabl
     @Override
     public void die() {
         try {
-            GreenfootSound dieSound = new GreenfootSound("Deadeye_die.wav");
+            GreenfootSound dieSound = new GreenfootSound("deadeyedead.mp3");
             dieSound.setVolume(80);
             dieSound.play();
         } catch (Exception e) {
@@ -200,16 +201,13 @@ public class Deadeye extends Character implements Movable, Attackable, Rewardabl
                 break;
             case ATTACKING:
                 if (attackFrame == currentAttackHitFrame && !attackHasHit) {
-                    String attackSoundFile;
                     if (currentAttackSprites == meleeAttackSprites) {
                         slash(null);
-                        attackSoundFile = "Deadeye_attack_melee.wav";
                     } else {
                         shootProjectile(currentTarget);
-                        attackSoundFile = "Deadeye_attack_range.wav";
                     }
                     try {
-                        GreenfootSound attackSound = new GreenfootSound(attackSoundFile);
+                        GreenfootSound attackSound = new GreenfootSound("deadeyeattack.mp3");
                         attackSound.setVolume(70);
                         attackSound.play();
                     } catch (Exception e) {

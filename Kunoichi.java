@@ -1,3 +1,4 @@
+// File: newprojectloe-main/Kunoichi.java
 import greenfoot.*;
 import java.util.List;
 
@@ -29,7 +30,7 @@ public class Kunoichi extends Character implements Movable, Attackable, Rewardab
     public Kunoichi(boolean facingRight) {
         super(MAX_HEALTH, ATTACK_DAMAGE, ATTACK_RANGE, MOVE_SPEED, facingRight, Faction.DARK);
         try {
-            GreenfootSound spawnSound = new GreenfootSound("Kunoichi_spawn.wav");
+            GreenfootSound spawnSound = new GreenfootSound("kunoichi_spawn.wav");
             spawnSound.setVolume(75);
             spawnSound.play();
         } catch (Exception e) {
@@ -84,7 +85,7 @@ public class Kunoichi extends Character implements Movable, Attackable, Rewardab
     @Override
     public void die() {
          try {
-            GreenfootSound dieSound = new GreenfootSound("Kunoichi_die.wav");
+            GreenfootSound dieSound = new GreenfootSound("death.mp3");
             dieSound.setVolume(80);
             dieSound.play();
         } catch (Exception e) {
@@ -156,8 +157,7 @@ public class Kunoichi extends Character implements Movable, Attackable, Rewardab
                 if (attackFrame == currentAttackHitFrame && !attackHasHit) {
                     slash(null);
                     try {
-                        String attackSoundFile = (currentAttackSprites == attack1Sprites) ? "Kunoichi_attack1.wav" : "Kunoichi_attack2.wav";
-                        GreenfootSound attackSound = new GreenfootSound(attackSoundFile);
+                        GreenfootSound attackSound = new GreenfootSound("kunoichiattack.mp3");
                         attackSound.setVolume(70);
                         attackSound.play();
                     } catch (Exception e) {

@@ -29,7 +29,7 @@ public class Masamune extends Character implements Movable, Attackable, Rewardab
     public Masamune(boolean facingRight) {
         super(MAX_HEALTH, ATTACK_DAMAGE, ATTACK_RANGE, MOVE_SPEED, facingRight, Faction.DARK);
         try {
-            GreenfootSound spawnSound = new GreenfootSound("Masamune_spawn.wav");
+            GreenfootSound spawnSound = new GreenfootSound("spawn.wav");
             spawnSound.setVolume(75);
             spawnSound.play();
         } catch (Exception e) {
@@ -83,7 +83,7 @@ public class Masamune extends Character implements Movable, Attackable, Rewardab
     @Override
     public void die() {
         try {
-            GreenfootSound dieSound = new GreenfootSound("Masamune_die.wav");
+            GreenfootSound dieSound = new GreenfootSound("death.mp3");
             dieSound.setVolume(80);
             dieSound.play();
         } catch (Exception e) {
@@ -149,7 +149,7 @@ public class Masamune extends Character implements Movable, Attackable, Rewardab
                 if (attackFrame == currentAttackHitFrame && !attackHasHit) {
                     slash(null);
                     try {
-                        GreenfootSound attackSound = new GreenfootSound("Masamune_attack.wav");
+                        GreenfootSound attackSound = new GreenfootSound("masamuneattack.mp3");
                         attackSound.setVolume(70);
                         attackSound.play();
                     } catch (Exception e) {

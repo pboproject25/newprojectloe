@@ -29,8 +29,8 @@ public class Kitsune extends Character implements Movable, Attackable, Rewardabl
     public Kitsune(boolean facingRight) {
         super(MAX_HEALTH, ATTACK_DAMAGE, ATTACK_RANGE, MOVE_SPEED, facingRight, Faction.DARK);
         try {
-            GreenfootSound spawnSound = new GreenfootSound("Kitsune_spawn.wav");
-            spawnSound.setVolume(75);
+            GreenfootSound spawnSound = new GreenfootSound("spawn2.mp3");
+            spawnSound.setVolume(80);
             spawnSound.play();
         } catch (Exception e) {
             System.err.println("Peringatan: Gagal memuat suara spawn untuk " + this.getClass().getName());
@@ -56,6 +56,10 @@ public class Kitsune extends Character implements Movable, Attackable, Rewardabl
     @Override
     public void act() {
         if (getWorld() == null) return;
+        if (getWorld() instanceof BattleWorld && ((BattleWorld)getWorld()).isPaused()) {
+            return; 
+        }
+        
         super.act();
         if (currentState == State.DYING) {
             animate(); performAction(); return;
@@ -77,7 +81,7 @@ public class Kitsune extends Character implements Movable, Attackable, Rewardabl
     @Override
     public void die() {
          try {
-            GreenfootSound dieSound = new GreenfootSound("Kitsune_die.wav");
+            GreenfootSound dieSound = new GreenfootSound("kitsunedead.mp3");
             dieSound.setVolume(80);
             dieSound.play();
         } catch (Exception e) {
@@ -143,7 +147,7 @@ public class Kitsune extends Character implements Movable, Attackable, Rewardabl
                 if (attackFrame == currentAttackHitFrame && !attackHasHit) {
                     shootProjectile(currentTarget);
                      try {
-                        GreenfootSound attackSound = new GreenfootSound("Kitsune_attack.wav");
+                        GreenfootSound attackSound = new GreenfootSound("kitsuneattack.mp3");
                         attackSound.setVolume(70);
                         attackSound.play();
                     } catch (Exception e) {
@@ -226,11 +230,10 @@ public class Kitsune extends Character implements Movable, Attackable, Rewardabl
         int ourRadius = this.getHitboxRadius();
         int dx = Math.abs(this.getX() - target.getX());
         
-        // Jarak antara tepi unit dan tepi target
         int gap = dx - targetRadius - ourRadius;
         
         return gap <= this.attackRange;
-    }  
+    }
 
     private boolean isEnemyFaction(Character target) {
         if (target == null) return false;
@@ -239,7 +242,7 @@ public class Kitsune extends Character implements Movable, Attackable, Rewardabl
 
      private Character findTarget() {
         if (getWorld() == null) return null;
-        List<Character> charactersInRange = getObjectsInRange(attackRange, Character.class);
+        List<Character> charactersInRange = getObjectsInRange(9999, Character.class);
         Character closestEnemy = null;
         int minDistance = Integer.MAX_VALUE;
         for (Character potentialTarget : charactersInRange) {
@@ -285,4 +288,4 @@ public class Kitsune extends Character implements Movable, Attackable, Rewardabl
     public int getRewardValue() {
         return REWARD_VALUE;
     }
-}
+}   

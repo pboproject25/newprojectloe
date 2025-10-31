@@ -27,9 +27,11 @@ public class KitsuneFire extends Projectile {
     @Override
     public void act() {
         if (getWorld() == null) return;
-
-        moveForward();
-        checkCollision(); 
+        if (getWorld() instanceof BattleWorld && ((BattleWorld)getWorld()).isPaused()) {
+            return; 
+        }
+        
+        super.act();
         animate();
         checkEdge();
     }

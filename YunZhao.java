@@ -29,7 +29,7 @@ public class YunZhao extends Character implements Movable, Attackable, Rewardabl
     public YunZhao(boolean facingRight) {
         super(MAX_HEALTH, ATTACK_DAMAGE, ATTACK_RANGE, MOVE_SPEED, facingRight, Faction.LIGHT);
         try {
-            GreenfootSound spawnSound = new GreenfootSound("YunZhaoSpawn.wav");
+            GreenfootSound spawnSound = new GreenfootSound("spawn.wav");
             spawnSound.setVolume(75);
             spawnSound.play();
         } catch (Exception e) {

@@ -26,7 +26,7 @@ public class Hayato extends Character implements Movable, Attackable, Rewardable
     public Hayato(boolean facingRight) {
         super(MAX_HEALTH, ATTACK_DAMAGE, ATTACK_RANGE, MOVE_SPEED, facingRight, Faction.LIGHT);
         try {
-            GreenfootSound spawnSound = new GreenfootSound("HayatoSpawn.wav");
+            GreenfootSound spawnSound = new GreenfootSound("sumimasen.mp3");
             spawnSound.setVolume(75);
             spawnSound.play();
         } catch (Exception e) {
@@ -79,7 +79,7 @@ public class Hayato extends Character implements Movable, Attackable, Rewardable
     @Override
     public void die() {
         try {
-            GreenfootSound dieSound = new GreenfootSound("HayatoDie.wav");
+            GreenfootSound dieSound = new GreenfootSound("death.mp3");
             dieSound.setVolume(80);
             dieSound.play();
         } catch (Exception e) {

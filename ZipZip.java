@@ -29,7 +29,7 @@ public class ZipZip extends Character implements Movable, Attackable, Rewardable
     public ZipZip(boolean facingRight) {
         super(MAX_HEALTH, ATTACK_DAMAGE, ATTACK_RANGE, MOVE_SPEED, facingRight, Faction.DARK);
         try {
-            GreenfootSound spawnSound = new GreenfootSound("ZipZip_spawn.wav");
+            GreenfootSound spawnSound = new GreenfootSound("ZipZip_spawn.mp3");
             spawnSound.setVolume(75);
             spawnSound.play();
         } catch (Exception e) {
@@ -56,6 +56,10 @@ public class ZipZip extends Character implements Movable, Attackable, Rewardable
     @Override
     public void act() {
          if (getWorld() == null) return;
+         if (getWorld() instanceof BattleWorld && ((BattleWorld)getWorld()).isPaused()) {
+            return; 
+         }
+         
          super.act();
         if (currentState == State.DYING) {
             animate();
@@ -79,7 +83,7 @@ public class ZipZip extends Character implements Movable, Attackable, Rewardable
     @Override
     public void die() {
         try {
-            GreenfootSound dieSound = new GreenfootSound("ZipZip_die.wav");
+            GreenfootSound dieSound = new GreenfootSound("death.mp3");
             dieSound.setVolume(80);
             dieSound.play();
         } catch (Exception e) {
@@ -228,11 +232,10 @@ public class ZipZip extends Character implements Movable, Attackable, Rewardable
         int ourRadius = this.getHitboxRadius();
         int dx = Math.abs(this.getX() - target.getX());
         
-        // Jarak antara tepi unit dan tepi target
         int gap = dx - targetRadius - ourRadius;
         
         return gap <= this.attackRange;
-    }  
+    }
 
     private boolean isEnemyFaction(Character target) {
         if (target == null) return false;
@@ -241,7 +244,7 @@ public class ZipZip extends Character implements Movable, Attackable, Rewardable
 
      private Character findTarget() {
         if (getWorld() == null) return null;
-        List<Character> charactersInRange = getObjectsInRange(attackRange, Character.class);
+        List<Character> charactersInRange = getObjectsInRange(9999, Character.class);
         Character closestEnemy = null;
         int minDistance = Integer.MAX_VALUE;
         for (Character potentialTarget : charactersInRange) {

@@ -31,6 +31,9 @@ public class ZipZipLightning extends Projectile {
     @Override
     public void act() {
         if (getWorld() == null) return;
+        if (getWorld() instanceof BattleWorld && ((BattleWorld)getWorld()).isPaused()) {
+            return; 
+        }
 
         moveForward();
         checkCollision();
